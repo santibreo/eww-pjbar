@@ -1,0 +1,35 @@
+(defpoll VOLUME :interval "100ms" "scripts/getvolume.sh")
+(defpoll WIFI :interval "200ms" "scripts/getwifi.sh")
+
+(defwidget system []
+  (box :class "system" :orientation "h" :space-evenly false :halign "end"
+    (sound :onchange "amixer --device pulse sset Master {}%"
+           :onclick "amixer --device pulse set Master 1+ toggle")
+    (wifi :onclick "nmcli networking ${WIFI == 'off' ? 'on' : 'off'}")))
+
+(defwidget sound [onchange onclick]
+  (box :orientation "v"
+       :halign "center"
+       :valign "center"
+       :class "sound"
+    (button :class "button"
+            :onclick onclick
+      (image :path "${EWW_CONFIG_DIR}/svg/volume${VOLUME >= 0 ? VOLUME > 20 ? VOLUME > 60 ? "-2" : "-1" : "" : "-x"}.svg"
+             :image-height 14))
+    (scale :class "scale"
+           :active true
+           :orientation "h"
+           :value VOLUME
+           :onchange onchange)))
+
+(defwidget wifi [onclick]
+  (box :orientation "v"
+       :halign "center"
+       :valign "center"
+       :class "wifi"
+    (button :class "button"
+            :onclick onclick
+      (image :path "${EWW_CONFIG_DIR}/svg/wifi${WIFI == 'off' ? '-off' : ''}.svg"
+             :image-height 16))
+    (label :class "label"
+           :text {WIFI == 'off' ? 'disconnected' : WIFI})))

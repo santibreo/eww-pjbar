@@ -1,0 +1,78 @@
+* {
+  all: unset; //Unsets everything so you can style everything from scratch
+}
+
+//Global Styles
+.bar {
+  font-family: 'Noto Emoji', 'Roboto';
+  background-color: #111111;
+  color: #bbbbbb;
+  font-size: 9pt;
+}
+
+.leftstuff {
+  margin-left: 10px;
+}
+.rightstuff {
+  margin-right: 10px;
+}
+// Styles on classes (see eww.yuck for more information)
+box.metric,
+box.sound,
+box.wifi,
+box.datetime button {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+box.metrics,
+box.system {
+  border-left: 1px #444 solid;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.metric .scale trough highlight,
+.sound .scale trough highlight {
+  background-color: #D35D6E;
+  border-radius: 3px;
+}
+.metric .scale trough highlight {
+  background-color: #cccccc;
+}
+.metric .scale trough,
+.sound .scale trough {
+  background-color: #4e4e4e;
+  border-radius: 3px;
+  min-height: 4px;
+  min-width: 50px;
+}
+.sound .scale trough {
+  min-height: 6px;
+}
+.workspaces button:hover {
+  color: #D35D6E;
+}
+
+.wifi .label {
+  font-family: 'Fira Code';
+  font-size: 9pt;
+  min-width: 50px;
+}
+
+.datetime {
+  font-family: 'Fira Code';
+  font-size: 9pt;
+  border-left: 1px #666 solid;
+  padding-left: 5px;
+}
+.workspaces button {
+  font-size: 3pt;
+  border: 1px solid #666;
+  border-radius: 50%;
+  background-color: #111111;
+}
+
+.workspaces button.selected {
+  box-shadow: 0 0 5px #fff;
+  background-color: #aaa;
+}

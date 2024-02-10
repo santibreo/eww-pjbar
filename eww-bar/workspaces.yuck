@@ -1,0 +1,19 @@
+(defpoll CWS :interval "100ms" "scripts/getworkspace.sh")
+
+(defwidget workspace [index]
+    (button :class {CWS == index ? "selected" : ""}
+            :onclick "wmctrl -s ${index}"
+            {CWS == index ? "🔘" : " "}))
+
+(defwidget workspaces []
+  (box :class "workspaces"
+       :orientation "h"
+       :halign "start"
+       :valign "center"
+       :spacing 12
+    (workspace :index 0)
+    (workspace :index 1)
+    (workspace :index 2)
+    (workspace :index 3)
+    (workspace :index 4)))
+

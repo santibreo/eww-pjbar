@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="44"
+   height="30"
+   viewBox="0 0 21.999999 15"
+   fill="none"
+   stroke="currentColor"
+   stroke-width="1"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   class="feather feather-volume-1"
+   version="1.1"
+   id="svg5789"
+   sodipodi:docname="volume-1.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   inkscape:export-filename="/home/pj/Desktop/Projects/Alone/eww-pjbar/bar-example/svg/volume-1.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5793" />
+  <sodipodi:namedview
+     id="namedview5791"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="14.979167"
+     inkscape:cx="-3.4047287"
+     inkscape:cy="9.7134907"
+     inkscape:window-width="1920"
+     inkscape:window-height="1080"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg5789"
+     width="40px"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:lockguides="true" />
+  <polygon
+     points="11,19 11,5 6,9 2,9 2,15 6,15 "
+     id="polygon5785"
+     style="stroke:#cccccc;stroke-opacity:1"
+     transform="translate(-1.5,-4.500054)" />
+  <path
+     d="m 14.04,3.959946 a 5,5 0 0 1 0,7.07"
+     id="path5787"
+     style="stroke:#cccccc;stroke-opacity:1" />
+</svg>

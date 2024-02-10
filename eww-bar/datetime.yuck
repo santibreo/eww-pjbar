@@ -1,0 +1,18 @@
+(defpoll TIME :interval "1s" "date +'%H:%M:%S'")
+(defpoll DATE :interval "1h" "date +'%d %B, %Y'")
+
+
+(defvar calendar_is_visible false)
+
+
+(defwidget datetime []
+  (box :orientation "v"
+       :halign "center"
+       :valign "center"
+       :class "datetime"
+    (label :class "label"
+           :text TIME)
+    (button :class "button"
+            :onclick "${EWW_EXECUTABLE} -c $HOME/.config/eww ${calendar_is_visible ? 'close' : 'open'} calendar"
+            :onrightclick "${EWW_EXECUTABLE} -c $HOME/.config/eww ${calendar_is_visible ? 'open' : 'close'} calendar"
+            DATE)))

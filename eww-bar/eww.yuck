@@ -1,0 +1,49 @@
+(include "workspaces.yuck")
+(include "metrics.yuck")
+(include "system.yuck")
+(include "datetime.yuck")
+(include "popups.yuck")
+
+(defwidget bar []
+  (centerbox :orientation "h"
+    (leftstuff)
+    (middlestuff)
+    (rightstuff)))
+
+(defwidget leftstuff []
+  (box :class "leftstuff" :orientation "h" :space-evenly false :halign "start"
+    (workspaces)))
+
+(defwidget middlestuff []
+  (box :class "middlestuff" :orientation "h" :space-evenly false :halign "center"
+    ))
+
+(defwidget rightstuff []
+  (box :class "rightstuff" :orientation "h" :space-evenly false :halign "end"
+    (metrics)
+    (system)
+    (datetime)))
+
+(defwindow bar
+  :monitor 0
+  :windowtype "dock"
+  :geometry (geometry :x "0%"
+                      :y "0px"
+                      :width "100%"
+                      :height "10px"
+                      :anchor "top center")
+  :reserve (struts :side "top" :distance "38px")
+  (bar))
+
+
+; This is NOT USED ------------------------------------------------------------
+(defwidget music []
+  (box :class "music"
+       :orientation "h"
+       :space-evenly false
+       :halign "center"
+    {music != "" ? "🎵${music}" : ""}))
+
+(deflisten music :initial ""
+  "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || true")
+
