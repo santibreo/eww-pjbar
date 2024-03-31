@@ -18,5 +18,5 @@
             :value {EWW_CPU.avg})
     (metric :label "💿 DISK"
             :value {round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)})
-    (metric :label "${EWW_BATTERY.BAT0.capacity >= 15 ? EWW_BATTERY.BAT0.capacity > 80 ? "🔋" : "🪫" : "💀"} BATTERY"
+    (metric :label "${EWW_BATTERY.BAT0.status == "Charging" ? "🔌" : EWW_BATTERY.BAT0.capacity >= 15 ? EWW_BATTERY.BAT0.capacity > 80 ? "🔋" : "🪫" : "💀"} BATTERY"
             :value {EWW_BATTERY.BAT0.capacity})))
