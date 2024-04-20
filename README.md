@@ -5,8 +5,8 @@ It uses a language I am unfamiliar with, which is this `.yuck` extension. Despit
 
 There is plenty of nicest bar around the internet, I really like this:
 
-- [](https://github.com/adi1090x/widgets.git)
-- [](https://github.com/saimoomedits/eww-widgets.git)
+- https://github.com/adi1090x/widgets.git
+- https://github.com/saimoomedits/eww-widgets.git
 
 This bar is really simply, and lacks of interactivity, just pretty basic actions can be performed:
 
